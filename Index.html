@@ -14,7 +14,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
+      <div class="container-fluid mx-3 px-5">
         <a class="navbar-brand" href="#"
           ><img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRKlWYq1rs54H1m_8GYKGRg97kR4zO59dtYLuvfL4iyIikwqjnWrUNE6gZOJJr8kFuGuI&usqp=CAU"
@@ -42,30 +42,33 @@
               <a class="nav-link" href="#saldi">Saldi</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Welcome Summer</a>
+              <a class="nav-link" href="#welcome">Welcome Summer</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Last Minute</a>
+              <a class="nav-link" href="#last">Last Minute</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Recensioni</a>
+              <a class="nav-link" href="#recensioni">Recensioni</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Cerca posti da sogni" aria-label="Search" />
-            <button class="btn btn-outline-success" type="submit">Cerca</button>
+            <button class="btn btn-outline-danger" type="submit">Cerca</button>
           </form>
         </div>
       </div>
     </nav>
     <div class="container shadow-sm bg-light p-5 mt-4 rounded-2">
-      <h1 class="h1 display-1 border-bottom border-secondary-subtle -">WeRoad<span class="fs-5 fw-light">-made for andventure</span></h1>
-      <p class="fs-3 fst-italic">Prepara lo zaino, gli amici li portiamo noi</p>
+      <h1 class="h1 display-1 border-bottom border-secondary-subtle pb-3">WeRoad<span class="fs-5 fw-light align-middle">-made for andventure</span></h1>
+      <p class="fs-3 fst-italic my-4">Prepara lo zaino, gli amici li portiamo noi</p>
       <button type="button" class="btn btn-info px-5 text-white fw-bold">Prenota ora</button>
     </div>
     <div class="container mt-3 px-0">
-      <h3 class="saldi">Saldi</h3>
-      <div class="row gx-4">
+      <div class="d-flex justify-content-between align-content-center my-4">
+        <h3 id="saldi" class="mt-0">Saldi</h3>
+        <a class="text-decoration-none" data-bs-toggle="collapse" href="#section-1">Nascondi sezioni</a>
+      </div>
+      <div id="section-1" class="collapse show row gx-4">
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="card border-2 border-info">
             <img src="https://www.travel365.it/foto/escursione-atollo.jpg" class="card-img-top" alt="papa nuova guinea" />
@@ -119,8 +122,11 @@
           </div>
         </div>
       </div>
-      <h3 class="mt-4">Welcome Summer</h3>
-      <div class="row gy-3">
+      <div class="d-flex justify-content-between align-content-center my-4">
+        <h3 id="welcome" class="mt-0">Welcome Summer</h3>
+        <a class="text-decoration-none" data-bs-toggle="collapse" href="#section-2">Nascondi sezione</a>
+      </div>
+      <div id="section-2" class="collapse show row gy-3">
         <div class="col-sm-6 col-lg-4 col-xxl-2">
           <div class="card shadow-lg border-0">
             <img src="https://www.travel365.it/foto/escursione-atollo.jpg" class="card-img-top" alt="papa nuova guinea" />
@@ -208,10 +214,11 @@
         <div class="col-3">
           <h3 class="fs-1 fw-light">Moraton Island</h3>
           <p class="font-monospace">15-06-2024-17-07-2024</p>
-          <p class="fs-5 fw-light">Ville a partire da 500 euro, non fartele sfuggire</p>
+          <p class="fs-5 lead">Ville a partire da 500 euro, non fartele sfuggire</p>
+          <p class="badge rounded-pill text-bg-dark">Best price</p>
         </div>
       </div>
-      <h3 class="last mt-5 mb-3">Last minute</h3>
+      <h3 id="last" class="last mt-5 mb-3">Last minute</h3>
       <div class="row g-3">
         <div class="cl-sm-6 col-md-4 col-lg-2">
           <img src="https://www.travel365.it/foto/escursione-atollo.jpg" class="img-fluid rounded" alt="papa nuova guinea" />
@@ -232,13 +239,13 @@
           <img src="https://www.travel365.it/foto/escursione-atollo.jpg" class="img-fluid rounded" alt="papa nuova guinea" />
         </div>
       </div>
-      <h3 class="mt-5 mb-3 text-center">Recensioni</h3>
+      <h3 id="recensioni" class="mt-5 mb-3 text-center">Recensioni</h3>
       <div class="row gy-3">
         <div class="col-1">
           <img
             src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxATBggQBwgKCg0NBw0IDQgHCA8ICQgNFB0XFhURExMYHSggGBolGxMTITEhMSkrLi46Fx8zODMsNygtLisBCgoKDQ0NDw0NDisZExkrKysrKys3LSsrKysrKzcrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAMgAyAMBIgACEQEDEQH/xAAaAAEAAwEBAQAAAAAAAAAAAAAAAwQFAgEH/8QAMxABAAIBAgIGCQMFAQAAAAAAAAECAwQREiEiMTNBUXIFMlJTYXGRorEUgYIjQmKh0RP/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAYEQEBAQEBAAAAAAAAAAAAAAAAARExEv/aAAwDAQACEQMRAD8A+qANMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAERz5RMz4VAFvFoZmP6k8EeHrWWaaKkddZt5pTVxljX/TU93VxfRUnqia+WTTGWLeXRWiJ/85448PVsqTHPnG0+CgAIAAAAAAAAAAAAAAAA6x0mbRFY33aen08Vjxt32c6LBw497R0p+1ZZakegCgACDUaeLR4W7rpwGJkrMWmLxtMOWnrcPFTesdKOfzhmKxQBQAAAAAAAAAAAATaWnFnrE9UdKUK76Nr08k+FYqhGgAjYAAAAAAyNVThz226p6UNdn+kq9PHPjWarEqkArIAAAAAAAAAAAAu+jZ7T9lJZ0Fts3PqtXZCNQBGwAAAAAHij6Snnj8srzM19t8/yrsRLxWAaZAAAAAAAAAAAAHtbbWiY64txQ8BWzhycWOsx3/6dsrSZ+G3Peaz1/wCPxalbRMRNZiYnqmGVldACgAAObWiKzNp2iOuQc5snDjtM93V8WPM72mZ65txSm1efity5VjqQLGLQBQAAAAAAAAAAAAAATYNRas8ucd9JQgrVxaqs9/DPs3WGE7rktHq3tHllMJW08ZH6i/vLfVxa9p9a9p81jD008uqrG/Pin2aKGfPa0852jurCEMS0AUAAAAAAAAAAAAAAB1SszO1KzafguYdD7238aoqj3pqaa89VJiPG3RaePFWI6FYj9khq4za6G3916x9zuNB45PpReDTIpfoI95b6PJ9H+GT60XhNMjOtobf23rP2or6a8ddJmPGvSa4umMLv5jZyYazHTrE/HZUy6H3Vv4X/AOmpiiOr1mLbXrMT8XKoAAAAAAAAAALGm002525V8fae6PT8U739WPuacRy5JqyOceOK12pERDsEaAAAAAAAAAAcZMcWrteN4Zup001516VfH2Wq8mOXMSzWGLOs0/DO9PVn7VZpAAQAAAASYcfFkrEfvPs1RtD0fj6NrT1zO0fJKRbpXasRWNoiu0OgRsAAAAAAAAAAAAABzesTWYtG8TylkZsfDktE93VPtQ2VL0jTo1tHdyn5LErPAVkAAAAa2ljbBj8m7JbODscfkr+EqxIAjQAAAAAAAAAAAAAAh1cb6fJ5N0yPP2OTySDGAaZABAABs4Oxx+Sv4YzZwdjj8lfwlaiQBFAAAAAAAAAAAAAAEefscnkt+EiPP2OTyW/AMYBpkAEAAGzg7HH5K/gErUSAIoAAAAAAAAAAAAAAjz9jk8lvwAMYBpkAEf/Z"
             alt="foto vuota"
-            class="img-fluid rounded-circle border-2 border-info"
+            class="img-fluid rounded-circle border border-2 border-info"
           />
         </div>
         <div class="col-11">
@@ -252,7 +259,7 @@
           <img
             src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxATBggQBwgKCg0NBw0IDQgHCA8ICQgNFB0XFhURExMYHSggGBolGxMTITEhMSkrLi46Fx8zODMsNygtLisBCgoKDQ0NDw0NDisZExkrKysrKys3LSsrKysrKzcrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAMgAyAMBIgACEQEDEQH/xAAaAAEAAwEBAQAAAAAAAAAAAAAAAwQFAgEH/8QAMxABAAIBAgIGCQMFAQAAAAAAAAECAwQREiEiMTNBUXIFMlJTYXGRorEUgYIjQmKh0RP/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAYEQEBAQEBAAAAAAAAAAAAAAAAARExEv/aAAwDAQACEQMRAD8A+qANMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAERz5RMz4VAFvFoZmP6k8EeHrWWaaKkddZt5pTVxljX/TU93VxfRUnqia+WTTGWLeXRWiJ/85448PVsqTHPnG0+CgAIAAAAAAAAAAAAAAAA6x0mbRFY33aen08Vjxt32c6LBw497R0p+1ZZakegCgACDUaeLR4W7rpwGJkrMWmLxtMOWnrcPFTesdKOfzhmKxQBQAAAAAAAAAAAATaWnFnrE9UdKUK76Nr08k+FYqhGgAjYAAAAAAyNVThz226p6UNdn+kq9PHPjWarEqkArIAAAAAAAAAAAAu+jZ7T9lJZ0Fts3PqtXZCNQBGwAAAAAHij6Snnj8srzM19t8/yrsRLxWAaZAAAAAAAAAAAAHtbbWiY64txQ8BWzhycWOsx3/6dsrSZ+G3Peaz1/wCPxalbRMRNZiYnqmGVldACgAAObWiKzNp2iOuQc5snDjtM93V8WPM72mZ65txSm1efity5VjqQLGLQBQAAAAAAAAAAAAAATYNRas8ucd9JQgrVxaqs9/DPs3WGE7rktHq3tHllMJW08ZH6i/vLfVxa9p9a9p81jD008uqrG/Pin2aKGfPa0852jurCEMS0AUAAAAAAAAAAAAAAB1SszO1KzafguYdD7238aoqj3pqaa89VJiPG3RaePFWI6FYj9khq4za6G3916x9zuNB45PpReDTIpfoI95b6PJ9H+GT60XhNMjOtobf23rP2or6a8ddJmPGvSa4umMLv5jZyYazHTrE/HZUy6H3Vv4X/AOmpiiOr1mLbXrMT8XKoAAAAAAAAAALGm002525V8fae6PT8U739WPuacRy5JqyOceOK12pERDsEaAAAAAAAAAAcZMcWrteN4Zup001516VfH2Wq8mOXMSzWGLOs0/DO9PVn7VZpAAQAAAASYcfFkrEfvPs1RtD0fj6NrT1zO0fJKRbpXasRWNoiu0OgRsAAAAAAAAAAAAABzesTWYtG8TylkZsfDktE93VPtQ2VL0jTo1tHdyn5LErPAVkAAAAa2ljbBj8m7JbODscfkr+EqxIAjQAAAAAAAAAAAAAAh1cb6fJ5N0yPP2OTySDGAaZABAABs4Oxx+Sv4YzZwdjj8lfwlaiQBFAAAAAAAAAAAAAAEefscnkt+EiPP2OTyW/AMYBpkAEAAGzg7HH5K/gErUSAIoAAAAAAAAAAAAAAjz9jk8lvwAMYBpkAEf/Z"
             alt="foto vuota"
-            class="img-fluid rounded-circle border-2 border-info"
+            class="img-fluid rounded-circle border border-2 border-info"
           />
         </div>
         <div class="col-11">
@@ -266,7 +273,7 @@
           <img
             src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxATBggQBwgKCg0NBw0IDQgHCA8ICQgNFB0XFhURExMYHSggGBolGxMTITEhMSkrLi46Fx8zODMsNygtLisBCgoKDQ0NDw0NDisZExkrKysrKys3LSsrKysrKzcrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAMgAyAMBIgACEQEDEQH/xAAaAAEAAwEBAQAAAAAAAAAAAAAAAwQFAgEH/8QAMxABAAIBAgIGCQMFAQAAAAAAAAECAwQREiEiMTNBUXIFMlJTYXGRorEUgYIjQmKh0RP/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAYEQEBAQEBAAAAAAAAAAAAAAAAARExEv/aAAwDAQACEQMRAD8A+qANMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAERz5RMz4VAFvFoZmP6k8EeHrWWaaKkddZt5pTVxljX/TU93VxfRUnqia+WTTGWLeXRWiJ/85448PVsqTHPnG0+CgAIAAAAAAAAAAAAAAAA6x0mbRFY33aen08Vjxt32c6LBw497R0p+1ZZakegCgACDUaeLR4W7rpwGJkrMWmLxtMOWnrcPFTesdKOfzhmKxQBQAAAAAAAAAAAATaWnFnrE9UdKUK76Nr08k+FYqhGgAjYAAAAAAyNVThz226p6UNdn+kq9PHPjWarEqkArIAAAAAAAAAAAAu+jZ7T9lJZ0Fts3PqtXZCNQBGwAAAAAHij6Snnj8srzM19t8/yrsRLxWAaZAAAAAAAAAAAAHtbbWiY64txQ8BWzhycWOsx3/6dsrSZ+G3Peaz1/wCPxalbRMRNZiYnqmGVldACgAAObWiKzNp2iOuQc5snDjtM93V8WPM72mZ65txSm1efity5VjqQLGLQBQAAAAAAAAAAAAAATYNRas8ucd9JQgrVxaqs9/DPs3WGE7rktHq3tHllMJW08ZH6i/vLfVxa9p9a9p81jD008uqrG/Pin2aKGfPa0852jurCEMS0AUAAAAAAAAAAAAAAB1SszO1KzafguYdD7238aoqj3pqaa89VJiPG3RaePFWI6FYj9khq4za6G3916x9zuNB45PpReDTIpfoI95b6PJ9H+GT60XhNMjOtobf23rP2or6a8ddJmPGvSa4umMLv5jZyYazHTrE/HZUy6H3Vv4X/AOmpiiOr1mLbXrMT8XKoAAAAAAAAAALGm002525V8fae6PT8U739WPuacRy5JqyOceOK12pERDsEaAAAAAAAAAAcZMcWrteN4Zup001516VfH2Wq8mOXMSzWGLOs0/DO9PVn7VZpAAQAAAASYcfFkrEfvPs1RtD0fj6NrT1zO0fJKRbpXasRWNoiu0OgRsAAAAAAAAAAAAABzesTWYtG8TylkZsfDktE93VPtQ2VL0jTo1tHdyn5LErPAVkAAAAa2ljbBj8m7JbODscfkr+EqxIAjQAAAAAAAAAAAAAAh1cb6fJ5N0yPP2OTySDGAaZABAABs4Oxx+Sv4YzZwdjj8lfwlaiQBFAAAAAAAAAAAAAAEefscnkt+EiPP2OTyW/AMYBpkAEAAGzg7HH5K/gErUSAIoAAAAAAAAAAAAAAjz9jk8lvwAMYBpkAEf/Z"
             alt="foto vuota"
-            class="img-fluid rounded-circle border-2 border-info"
+            class="img-fluid rounded-circle border border-2 border-info"
           />
         </div>
         <div class="col-11">
@@ -278,9 +285,9 @@
         </div>
       </div>
     </div>
-    <footer class="bg-dark text-center p-4">
-      <button class="btn-dark">Contattaci</button>
-      <h6 class="text-white fw-light fs-5">WeRoad Italia S.r.l. - Viale Cassala, 30 - 20143 Milano (MI)</h6>
+    <footer class="bg-dark text-center mt-5 p-4">
+      <button class="btn btn-outline-light mb-3">Contattaci</button>
+      <h6 class="text-white lead fs-6">WeRoad Italia S.r.l. - Viale Cassala, 30 - 20143 Milano (MI)</h6>
     </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
