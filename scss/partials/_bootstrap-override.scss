@@ -33,6 +33,15 @@ $epicodeColor: (
   epicode-3: #cb2376,
 );
 
+$mybreakpoint: (
+  3xl: 1600px,
+  4xl: 1800px,
+);
+$myMaxWidth: (
+  3xl: 1520px,
+  4xl: 1720px,
+);
+
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../../bootstrap/variables";
 
@@ -45,7 +54,8 @@ $card-bg: $gray-800;
 $font-sizes: map-merge($font-sizes, $myFont);
 $border-widths: map-merge($border-widths, $myWidth);
 $theme-colors: map-merge($theme-colors, $epicodeColor);
-
+$grid-breakpoints: map-merge($grid-breakpoints, $mybreakpoint);
+$container-max-widths: map-merge($container-max-widths, $myMaxWidth);
 // 5. Include remainder of required parts
 @import "../../bootstrap/maps";
 @import "../../bootstrap/mixins";
