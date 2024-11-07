@@ -44,7 +44,7 @@ $card-bg: $gray-800;
 
 $font-sizes: map-merge($font-sizes, $myFont);
 $border-widths: map-merge($border-widths, $myWidth);
-$colors: map-merge($colors, $epicodeColor);
+$theme-colors: map-merge($theme-colors, $epicodeColor);
 
 // 5. Include remainder of required parts
 @import "../../bootstrap/maps";
